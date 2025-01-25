@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CERP Interface</title>
+    <!-- Google Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/CEPR-logo-solid-blue-RGB.png/640px-CEPR-logo-solid-blue-RGB.png" alt="CERP Logo">
+            <span><strong>CERP</strong></span>
+        </div>
+        <nav>
+            <div><i class="material-icons">dashboard</i>Dashboard</div>
+            <div><i class="material-icons">description</i>Record</div> 
+            <div><i class="material-icons">logout</i>Logout</div>
+        </nav>
+    </div>
+
+    <!-- Title -->
+    <h1>CERP Management System</h1>
+
+    <!-- Form -->
+    <form>
+        <label for="party-name">Party Name:</label>
+        <input type="text" id="party-name" name="party-name" placeholder="Enter Party Name">
+
+        <label for="site-name">Party Site Name:</label>
+        <input type="text" id="site-name" name="site-name" placeholder="Enter Site Name">
+
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date">
+
+        <button type="submit">Search <i class="material-icons">search</i></button>
+    </form>
+
+    <!-- Table -->
+    <table>
+    <thead>
+        <tr>
+            <th>Sr.</th>
+            <th>Date</th>
+            <th>Particulars</th>
+            <th>Vehicle</th>
+            <th>Material</th>
+            <th>Quantity</th>
+            <th>Rate</th>
+            <th>Balance</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>01/01/2025</td>
+            <td>Challan No. 1234</td>
+            <td>ABC123</td>
+            <td>Crush Sand</td>
+            <td>10</td>
+            <td>500</td>
+            <td>5000</td>
+            <td>
+                <button class="edit-btn" onclick="editRow(this)">Edit</button>
+            </td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>02/01/2025</td>
+            <td>Challan No. 1235</td>
+            <td>XYZ456</td>
+            <td>Crush Gravel</td>
+            <td>20</td>
+            <td>300</td>
+            <td>6000</td>
+            <td>
+                <button class="edit-btn" onclick="editRow(this)">Edit</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
